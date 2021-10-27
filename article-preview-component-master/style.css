@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+--Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+--Grayish-Blue: hsl(212, 23%, 69%);
+--Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+}
+
+a {
+    padding: 5px;
+}
+
+
+body {
+    background-color: var(--Light-Grayish-Blue);
+    font-size: 13px;
+    min-height: 100vh;
+
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+.main-section {
+    width: 700px;
+    height: 300px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    
+    
+    
+}
+
+.profile-image img {
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+
+}
+.content {
+    width: 100%;
+    padding: 50px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.action {
+    margin: 2%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    
+}
+.profile {
+    display: flex;
+    gap: 20px ;
+    width: 100%;
+}
+
+.image {
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+}
+.button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+.button :hover {
+    cursor: pointer;
+}
+.icon {
+    display: none;
+}
+
+ .icon-active  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+    width: 250px;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    position: relative;
+    top: -10rem;
+    left: 11rem;
+    transition: all 0.2s linear;
+}
+
+ .icon-active  ::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: var(--Very-Dark-Grayish-Blue);
+    border-bottom: 0;
+    margin-left: -20px;
+    margin-bottom: -20px;
+    transition: all 0.2s linear;
+}
+@media screen and (max-width :900px) {
+    .main-section {
+        flex-direction: column;
+        width: 300px;
+        height: 550px;
+    }
+    .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+    }
+    .content{
+        position: relative;
+    }
+    
+    .action {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    .icon-active {
+        position: absolute;
+    }
+    .icon-active ::after {
+        display: none;
+    }
+}

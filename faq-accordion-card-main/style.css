@@ -1,0 +1,116 @@
+@import url("https://fonts.google.com/specimen/Kumbh+Sans");
+
+:root {
+
+--Very-dark-desaturated-blue: hsl(238, 29%, 16%) ;
+--Soft-red: hsl(14, 88%, 65%) ;
+
+            /* Background gradient: */
+--Soft-violet: hsl(273, 75%, 66%) ;
+--Soft-blue: hsl(240, 73%, 65%) ;
+
+        /*  Text */
+--Very-dark-grayish-blue: hsl(237, 12%, 33%) ;
+--Dark-grayish-blue: hsl(240, 6%, 50%) ;
+
+                /* Dividers */
+--Light-grayish-blue: hsl(240, 5%, 91%) ;
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 12px;
+    background-image: linear-gradient( hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: Kumbh Sans , sans-serif;
+}
+h1 {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+        /* main style */
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+.main {
+    width: 900px;
+    height: 70vh;
+    padding: 50px 30px 50px 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    background-image: url(./images/bg-pattern-desktop.svg) , url(./images/illustration-woman-online-desktop.svg);
+    background-position: top 20px left -100px;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    
+}
+.main-faq {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.questions {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--Light-grayish-blue) ;
+    padding: 10px;
+    gap: 10px;
+}
+.question-text {
+    color: var(--Dark-grayish-blue);
+}
+.button {
+    width: 100%;
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
+background: transparent;
+border-color: transparent; 
+}
+
+.button :hover {
+    cursor: pointer;
+    color: var(--Soft-red);
+
+}
+
+            /* hiding text */
+.question-text {
+    display: none;
+}
+.show-text .question-text {
+    display: block;
+}
+.reverse-arrow {
+    display: none;
+}
+.show-text .reverse-arrow {
+    display: inline; 
+    transform: rotate(180deg);
+    
+}
+
+
+.show-text .arrow-icon {
+    display: none;
+}
+
+
+@media screen and (max-width : 750px) {
+body {
+    width: 375px;
+}
+}
+
